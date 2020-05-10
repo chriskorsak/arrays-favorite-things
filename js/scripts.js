@@ -6,11 +6,17 @@ $(document).ready(function() {
     var ledzeppelin = $("input#ledzeppelin").val();
     var cocktail = $("input#cocktail").val();
 
-    var favoriteThings = [color, food, season];
-    console.log(favoriteThings[0]);
-    console.log(favoriteThings[1]);
-    console.log(favoriteThings[2]);
-    console.log(ledzeppelin, cocktail);
+    var favoriteThings = [color, food, season, ledzeppelin, cocktail];
+    var selects = [];
+    selects.push(favoriteThings[0]);
+    selects.push(favoriteThings[1]);
+    selects.push(favoriteThings[2]);
+
+    $("ul#selectFavorites").append('<li>' + selects[0] + '</li>');
+    $("ul#selectFavorites").append('<li>' + selects[1] + '</li>');
+    $("ul#selectFavorites").append('<li>' + selects[2] + '</li>');
+
+    $("#output").show();
     event.preventDefault();
   });
 });
